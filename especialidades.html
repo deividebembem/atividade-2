@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f4f7f5">
+	<title>Especialidades | Hospital Aurora</title>
+	<link rel="stylesheet" href="especialidades.css">
+	<script src="especialidades.js" defer></script>
+</head>
+<body>
+	<nav class="menu-navegacao" aria-label="Navegação principal">
+		<a href="index.html">Home</a>
+		<a href="sobre.html">Sobre nosso Hospital</a>
+		<a href="especialidades.html" aria-current="page">Especialidades</a>
+		<a href="profissionais.html">Profissionais</a>
+		<a href="cadastro.html">Cadastro</a>
+		<a href="agendamento.html">Agendamento</a>
+	</nav>
+
+	<main class="pagina-especialidades">
+		<header class="cabecalho-pagina">
+			<img src="assets/logo.png" alt="Hospital Aurora" class="logo">
+			<div>
+				<p class="sobretitulo">Cuidado para cada etapa da vida</p>
+				<h1>Especialidades</h1>
+				<p class="introducao">Conheça nossas áreas de atendimento e encontre o cuidado mais adequado para você.</p>
+			</div>
+		</header>
+
+		<section class="filtros" aria-labelledby="titulo-filtros">
+			<h2 id="titulo-filtros">Encontre uma especialidade</h2>
+			<div class="controles-filtro">
+				<div class="campo-filtro">
+					<label for="busca-especialidade">Buscar</label>
+					<input
+						type="search"
+						id="busca-especialidade"
+						placeholder="Ex.: coração, alimentação..."
+						autocomplete="off"
+					>
+				</div>
+				<div class="campo-filtro">
+					<label for="filtro-area">Área de atendimento</label>
+					<select id="filtro-area">
+						<option value="todas">Todas as especialidades</option>
+						<option value="ortopedia">Ortopedia</option>
+						<option value="nutricao">Nutrição</option>
+						<option value="cardiologia">Cardiologia</option>
+						<option value="clinica-geral">Clínica geral</option>
+						<option value="pediatria">Pediatria</option>
+					</select>
+				</div>
+				<button class="botao-limpar" id="limpar-filtros" type="button">Limpar filtros</button>
+			</div>
+			<p class="contador-resultados" id="contador-resultados" aria-live="polite"></p>
+		</section>
+
+		<section class="lista-especialidades" aria-label="Lista de especialidades">
+			<article class="cartao-especialidade" data-area="ortopedia">
+				<span class="numero-cartao" aria-hidden="true">01</span>
+				<p class="tipo-atendimento">Movimento e articulações</p>
+				<h2>Ortopedia</h2>
+				<p>Prevenção, avaliação e tratamento de dores e lesões nos ossos, músculos, articulações e ligamentos.</p>
+			</article>
+
+			<article class="cartao-especialidade" data-area="nutricao">
+				<span class="numero-cartao" aria-hidden="true">02</span>
+				<p class="tipo-atendimento">Alimentação e saúde</p>
+				<h2>Nutrição</h2>
+				<p>Orientação alimentar individualizada para apoiar hábitos saudáveis, prevenção de doenças e necessidades nutricionais específicas.</p>
+			</article>
+
+			<article class="cartao-especialidade" data-area="cardiologia">
+				<span class="numero-cartao" aria-hidden="true">03</span>
+				<p class="tipo-atendimento">Coração e circulação</p>
+				<h2>Cardiologia</h2>
+				<p>Avaliação da saúde do coração e da circulação, com acompanhamento, prevenção e investigação de sintomas cardiovasculares.</p>
+			</article>
+
+			<article class="cartao-especialidade" data-area="clinica-geral">
+				<span class="numero-cartao" aria-hidden="true">04</span>
+				<p class="tipo-atendimento">Cuidado integral</p>
+				<h2>Clínica geral</h2>
+				<p>Atendimento inicial para queixas comuns, avaliação geral da saúde e orientação sobre prevenção ou encaminhamento quando necessário.</p>
+			</article>
+
+			<article class="cartao-especialidade" data-area="pediatria">
+				<span class="numero-cartao" aria-hidden="true">05</span>
+				<p class="tipo-atendimento">Saúde de crianças e adolescentes</p>
+				<h2>Pediatria</h2>
+				<p>Acompanhamento do crescimento e desenvolvimento, prevenção e cuidado clínico de bebês, crianças e adolescentes.</p>
+			</article>
+
+			<p class="mensagem-vazia" id="mensagem-vazia" hidden>Nenhuma especialidade encontrada. Ajuste os filtros e tente novamente.</p>
+		</section>
+	</main>
+</body>
+</html>
