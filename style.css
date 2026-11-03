@@ -2,3 +2,105 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    color-scheme: light;
+    --cor-texto: #203331;
+    --cor-suave: #59706b;
+    --cor-fundo: #f4f7f5;
+    --cor-superficie: #ffffff;
+    --cor-destaque: #176b5b;
+    --cor-destaque-claro: #dceee8;
+    --cor-borda: #d8e2de;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.menu-navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 26px;
+    padding: 16px 24px;
+    background: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.menu-navegacao a {
+    color: var(--cor-texto);
+    font-size: 0.94rem;
+    text-decoration: none;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a[aria-current="page"] {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.menu-navegacao a:focus-visible {
+    outline: 3px solid #9ed1c1;
+    outline-offset: 3px;
+}
+
+.conteudo-principal {
+    display: flex;
+    min-height: 65vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(920px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 52px 0 72px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 24px;
+    object-fit: contain;
+}
+
+.conteudo-principal h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.45rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.conteudo-principal p {
+    margin: 12px 0 0;
+    color: var(--cor-suave);
+}
+
+@media (max-width: 520px) {
+    .menu-navegacao {
+        justify-content: flex-start;
+        gap: 8px 18px;
+        padding: 14px 20px;
+    }
+
+    .conteudo-principal {
+        width: min(100% - 32px, 440px);
+        padding: 38px 0 52px;
+    }
+
+    .logo {
+        width: 88px;
+        height: 88px;
+    }
+
+    .conteudo-principal h1 {
+        font-size: 2rem;
+    }
+}
