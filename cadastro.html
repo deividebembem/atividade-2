@@ -1,43 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <meta name="theme-color" content="#f4f7f5">
+    <title>Cadastro | Hospital Aurora</title>
     <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js" defer></script>
 </head>
-<body class="profissionais">
-    <nav class="menu">
-    <a href="index.html">Principal</a>
-    <a href="sobre.html">Sobre nosso Hospital</a>
-    <a href="especialidades.html">Especialidades</a>
-    <a href="profissionais.html">Profissionais</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="agendamento.html">Agendamento</a>
+<body>
+    <nav class="menu-navegacao" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre nosso Hospital</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="profissionais.html">Profissionais</a>
+        <a href="cadastro.html" aria-current="page">Cadastro</a>
+        <a href="agendamento.html">Agendamento</a>
     </nav>
-    <p>Olá, bem vindo a nossa página de cadastro. Vou pedir algumas informações importantes de ti pois dessa forma posso saber a melhor forma para te ajudar.</p>
-    
 
-    <main class="conteudo_principal">
-        <img src="assents/logo.jpg" alt="Identidade visual da biblioteca" class="logo">
-        <h1>Novo leitor</h1>
-        <form id="formulario_cadastro">
-            <label for="nome">Nome
-                <input type="text" id="nome" placeholder="Ex.: Maria" required>
-            </label>
-            <label for="email">E-mail
-                <input type="Email" id="email" placeholder="Ex.: maria@gmail.com" required>
-            </label>
-            <label for="telefone">Telefone
-                <input type="Tel" id="telefone" placeholder="Ex.: 71-91234-5678" required>
-            </label>
-            <label for="Profissional que necessita">Profissional
-                <input type="Profissional" id="Profissional" placeholder="Ex:Cardiologista, pediatra..." required>
-            </label>
-            <!-- Pedir pra I.A colocar os profissionais como uma lista para que o cliente consiga selecionar qual achar melhor. -->
-            <button type="button" onclick="funcaoCadastrarCliente()">Cadastrar</button>
-        </form>
+    <main class="pagina-cadastro">
+        <header class="cabecalho-pagina">
+            <img src="assets/logo.png" alt="Hospital Aurora" class="logo">
+            <div>
+                <p class="sobretitulo">Um cuidado mais próximo começa aqui</p>
+                <h1>Cadastro de paciente</h1>
+                <p class="introducao">Informe seus dados para facilitar o contato da nossa equipe e os próximos passos do seu atendimento.</p>
+            </div>
+        </header>
+
+        <div class="conteudo-cadastro">
+            <section class="cartao-formulario" aria-labelledby="titulo-formulario">
+                <h2 id="titulo-formulario">Seus dados</h2>
+                <p class="texto-suave">O envio online ainda não está disponível. Para concluir o cadastro, entre em contato com a central.</p>
+                <form id="formulario-cadastro">
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex.: Maria Silva" autocomplete="name" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Ex.: maria@email.com" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Ex.: (71) 91234-5678" autocomplete="tel" required>
+                    </div>
+                    <button class="botao-principal" type="submit">Continuar</button>
+                    <p class="mensagem-formulario" id="mensagem-cadastro" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <aside class="painel-apoio">
+                <p class="sobretitulo">Atendimento integrado</p>
+                <h2>Já sabe com quem quer se consultar?</h2>
+                <p>Conheça nossa equipe e escolha o profissional que melhor atende às suas necessidades.</p>
+                <a class="link-secundario" href="profissionais.html">Conhecer profissionais</a>
+                <p class="texto-suave">Você também pode <a href="agendamento.html">solicitar um agendamento</a>.</p>
+            </aside>
+        </div>
     </main>
-<script src="cadastro.js"></script>
 </body>
 </html>

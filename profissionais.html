@@ -1,22 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profissionais</title>
+    <meta name="theme-color" content="#f4f7f5">
+    <title>Profissionais | Hospital Aurora</title>
     <link rel="stylesheet" href="profissionais.css">
 </head>
-<body class="profissionais">
-    <nav class="menu">
-    <a href="index.html">Principal</a>
-    <a href="sobre.html">Sobre nosso Hospital</a>
-    <a href="especialidades.html">Especialidades</a>
-    <a href="profissionais.html">Profissionais</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="agendamento.html">Agendamento</a>
+<body>
+    <nav class="menu-navegacao" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre nosso Hospital</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="profissionais.html" aria-current="page">Profissionais</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="agendamento.html">Agendamento</a>
     </nav>
-    <p>Bem vindo ao nosso quadro de profissionais.</p>
-    <p>Temos cardiologista, ortopedista, nutricionista, pediatra, clínico geral.</p>
-    
+
+    <main class="pagina-profissionais">
+        <header class="cabecalho-pagina">
+            <img src="assets/logo.png" alt="Hospital Aurora" class="logo">
+            <div>
+                <p class="sobretitulo">Experiência com acolhimento</p>
+                <h1>Nossos profissionais</h1>
+                <p class="introducao">Uma equipe preparada para oferecer cuidado atento e acompanhar você em cada etapa da saúde.</p>
+            </div>
+        </header>
+
+        <section class="lista-profissionais" aria-label="Equipe de profissionais">
+            <article class="cartao-profissional">
+                <p class="tipo-atendimento">Cardiologia</p>
+                <h2>Beatriz Oliveira</h2>
+                <p>Com formação avançada e ampla experiência clínica, dedica-se à prevenção e ao cuidado da saúde do coração com atenção individualizada.</p>
+                <a href="agendamento.html?profissional=beatriz-oliveira">Agendar com Beatriz</a>
+            </article>
+            <article class="cartao-profissional">
+                <p class="tipo-atendimento">Ortopedia</p>
+                <h2>Kaiky Guilherme</h2>
+                <p>Atua no cuidado de lesões e condições musculoesqueléticas, com foco na recuperação da mobilidade e da qualidade de vida.</p>
+                <a href="agendamento.html?profissional=kaiky-guilherme">Agendar com Kaiky</a>
+            </article>
+            <article class="cartao-profissional">
+                <p class="tipo-atendimento">Nutrição</p>
+                <h2>Mirella Lima</h2>
+                <p>Oferece orientação nutricional personalizada, promovendo hábitos alimentares saudáveis e bem-estar em diferentes fases da vida.</p>
+                <a href="agendamento.html?profissional=mirella-lima">Agendar com Mirella</a>
+            </article>
+            <article class="cartao-profissional">
+                <p class="tipo-atendimento">Clínica geral</p>
+                <h2>Pedro Damasceno</h2>
+                <p>Realiza avaliação integral, atendimento inicial e orientação sobre prevenção e os próximos cuidados necessários.</p>
+                <a href="agendamento.html?profissional=pedro-damasceno">Agendar com Pedro</a>
+            </article>
+            <article class="cartao-profissional">
+                <p class="tipo-atendimento">Pediatria</p>
+                <h2>Felipe Veloso</h2>
+                <p>Acompanha a saúde e o desenvolvimento de crianças e adolescentes com uma abordagem cuidadosa e acolhedora.</p>
+                <a href="agendamento.html?profissional=felipe-veloso">Agendar com Felipe</a>
+            </article>
+        </section>
+
+        <section class="chamada-cadastro" aria-label="Próximos passos">
+            <div>
+                <h2>Seu cuidado continua por aqui</h2>
+                <p>Faça seu cadastro ou escolha uma data para solicitar seu atendimento.</p>
+            </div>
+            <div class="acoes-chamada">
+                <a href="cadastro.html">Fazer cadastro</a>
+                <a href="agendamento.html">Ver agendamento</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

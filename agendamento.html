@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento</title>
+    <meta name="theme-color" content="#f4f7f5">
+    <title>Agendamento | Hospital Aurora</title>
     <link rel="stylesheet" href="agendamento.css">
+    <script src="agendamento.js" defer></script>
 </head>
-<body class="profissionais">
-    <nav class="menu">
-    <a href="index.html">Principal</a>
-    <a href="sobre.html">Sobre nosso Hospital</a>
-    <a href="especialidades.html">Especialidades</a>
-    <a href="profissionais.html">Profissionais</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="agendamento.html">Agendamento</a>
+<body>
+    <nav class="menu-navegacao" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre nosso Hospital</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="profissionais.html">Profissionais</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="agendamento.html" aria-current="page">Agendamento</a>
     </nav>
 
-    
-    
+    <main class="pagina-agendamento">
+        <header class="cabecalho-pagina">
+            <img src="assets/logo.png" alt="Hospital Aurora" class="logo">
+            <div>
+                <p class="sobretitulo">Estamos aqui para cuidar de você</p>
+                <h1>Agende sua consulta</h1>
+                <p class="introducao">Escolha um profissional e a data desejada. Nossa equipe orientará você sobre a confirmação do horário.</p>
+            </div>
+        </header>
+
+        <div class="conteudo-agendamento">
+            <section class="cartao-formulario" aria-labelledby="titulo-formulario">
+                <h2 id="titulo-formulario">Solicitar agendamento</h2>
+                <p class="texto-suave">Preencha os campos para preparar sua solicitação. A confirmação do horário é feita pela central.</p>
+
+                <form id="formulario-agendamento">
+                    <div class="campo">
+                        <label for="profissional">Profissional</label>
+                        <select id="profissional" name="profissional" required>
+                            <option value="">Selecione um profissional</option>
+                            <option value="beatriz-oliveira">Beatriz Oliveira — Cardiologia</option>
+                            <option value="kaiky-guilherme">Kaiky Guilherme — Ortopedia</option>
+                            <option value="mirella-lima">Mirella Lima — Nutrição</option>
+                            <option value="pedro-damasceno">Pedro Damasceno — Clínica geral</option>
+                            <option value="felipe-veloso">Felipe Veloso — Pediatria</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="data">Data desejada</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <button class="botao-principal" type="submit">Continuar</button>
+                    <p class="mensagem-formulario" id="mensagem-agendamento" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <aside class="painel-apoio">
+                <p class="sobretitulo">Próximo passo</p>
+                <h2>Ainda não fez seu cadastro?</h2>
+                <p>Conheça nossa equipe e escolha o profissional que melhor atende às suas necessidades.</p>
+                <a class="link-secundario" href="cadastro.html">Ir para cadastro</a>
+                <p class="texto-suave">Quer conhecer nossa equipe antes de escolher? Veja o perfil dos <a href="profissionais.html">nossos profissionais</a>.</p>
+            </aside>
+        </div>
+    </main>
 </body>
 </html>
